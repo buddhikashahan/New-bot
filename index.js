@@ -71,6 +71,10 @@ async function processImage(img, imagesPath) {
 }
 
 const client = new Client({
+    webVersionCache: {
+        type: 'remote',
+        remotePath: 'https://raw.githubusercontent.com/wppconnect-team/wa-version/main/html/2.2409.0.html',
+    },
     authStrategy: new LocalAuth({
         dataPath: sessionDataPath
     })
